@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#6554d9">
+  <meta name="description" content="Learn Hub — learning, practice and progress for secondary school students.">
+  <title>Learn Hub</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Learn Hub home"><span class="brand-mark">L</span><span>Learn <b>Hub</b></span></a>
+      <div class="top-actions"><span id="session-label" class="muted">2026/2027</span><button id="theme-btn" class="btn btn-ghost" type="button" aria-label="Toggle dark mode">◐ Theme</button><button id="logout-btn" class="btn btn-ghost hidden">Sign out</button></div>
+    </header>
+    <main id="main" class="main">
+      <section class="loading-card"><div class="spinner"></div><p>Loading Learn Hub…</p></section>
+    </main>
+    <footer>Learn Hub <span>•</span> Learn at your pace. Grow with confidence.</footer>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="app.js"></script>
+  <script>
+    if ("serviceWorker" in navigator) window.addEventListener("load", () => navigator.serviceWorker.register("./sw.js").catch(console.warn));
+  </script>
+</body>
+</html>
